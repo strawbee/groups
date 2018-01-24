@@ -8,14 +8,17 @@ let app = angular.module('groups', []).controller('students', function($scope, $
     $scope.add = function() {
         $scope.errorvalidation = '';
         if (!$scope.addStudent) return;
-        if ($scope.students.indexOf($scope.addStudent) === -1)
+        if ($scope.students.indexOf($scope.addStudent) === -1) {
             $scope.students.push($scope.addStudent);
+            $scope.groupmsg = '';
+        }
         else $scope.errorvalidation = 'This student is already on the list.';
         $scope.addStudent = null;
     }
 
     $scope.remove = function(i) {
         $scope.errorvalidation = '';
+        $scope.groupmsg = '';
         $scope.students.splice(i, 1);
     }
 
@@ -45,9 +48,9 @@ function groupMe (n)   { // n is number of people per group
         i++;
     }
 
-    let resultMsg = 'Pears:<br />';
+    let resultMsg = `<h2>[ GROUPS ]</h2>`;
     for (let i = 0; i < results.length; i++) {
-        resultMsg += `Group ${i + 1}: ${results[i].join(', ')}<br />`
+        resultMsg += `<b>Group ${i + 1}</b>: ${results[i].join(', ')}<br />`
     }
     return resultMsg.trim();
 };
