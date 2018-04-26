@@ -1,6 +1,6 @@
 'use strict';
 
-let studentsArr = ['Bill', 'Daniel', 'Dean', 'Ed', 'Ender', 'Heath', 'Hector', 'Jamie', 'Jeremy', 'Jesus', 'Joe', 'Joel', 'Joy', 'Jordan', 'Karen', 'Kevin', 'Koko', 'Liza', 'Melanie', 'Mitchell', 'Nick', 'Richard', 'Rima', 'Roger', 'Steven', 'Yohanes'];
+let studentsArr = ['Cara', 'Carl', 'Collin', 'Daniel', 'David', 'Dawn', 'Jennifer', 'Joanna', 'Joshua', 'Josiah', 'Kris', 'Lacy', 'Mario', 'Michael', 'Panos', 'Ryan', 'Sarah B', 'Sarah G', 'Sean', 'Wyatt', 'Zachary'];
 
 // AngularJS application
 let app = angular.module('groups', []).controller('students', function($scope, $sce) {
